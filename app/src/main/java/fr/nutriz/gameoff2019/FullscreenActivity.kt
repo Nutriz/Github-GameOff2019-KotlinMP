@@ -3,7 +3,9 @@ package fr.nutriz.gameoff2019
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.View
+import fr.nutriz.gameof2019.createApplicationScreenMessage
 import kotlinx.android.synthetic.main.activity_fullscreen.*
 
 /**
@@ -47,6 +49,8 @@ class FullscreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        Log.d("****", "hello multiplat: " + createApplicationScreenMessage())
 
         setContentView(R.layout.activity_fullscreen)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
