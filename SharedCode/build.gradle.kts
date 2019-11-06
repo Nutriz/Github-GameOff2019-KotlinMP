@@ -22,12 +22,20 @@ kotlin {
 
     jvm("android")
 
+    js {
+        browser()
+    }
     sourceSets["commonMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
     }
 
     sourceSets["androidMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib")
+    }
+
+    kotlin.sourceSets["jsMain"].dependencies {
+        implementation(kotlin("stdlib-js"))
+        implementation("org.jetbrains.kotlinx:kotlinx-html-js:0.6.12")
     }
 }
 
