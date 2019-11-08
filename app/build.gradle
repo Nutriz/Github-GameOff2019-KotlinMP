@@ -35,6 +35,11 @@ dependencies {
 
 kotlin {
     android("android")
+
+    js("web") {
+        browser()
+    }
+
     // This is for iPhone emulator
     // Switch here to iosArm64 (or iosArm32) to build library for iPhone device
     iosX64("ios") {
@@ -42,6 +47,7 @@ kotlin {
             framework()
         }
     }
+
     sourceSets {
         commonMain {
             dependencies {
@@ -63,6 +69,11 @@ kotlin {
             dependencies {
                 implementation kotlin('test')
                 implementation kotlin('test-junit')
+            }
+        }
+        webMain {
+            dependencies {
+                implementation kotlin('stdlib-js')
             }
         }
         iosMain {
