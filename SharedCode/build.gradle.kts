@@ -27,15 +27,23 @@ kotlin {
     }
     sourceSets["commonMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.2")
     }
 
     sourceSets["androidMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib")
+//        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.2")
     }
 
     kotlin.sourceSets["jsMain"].dependencies {
         implementation(kotlin("stdlib-js"))
-        implementation("org.jetbrains.kotlinx:kotlinx-html-js:0.6.12")
+//        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.3.2")
+//        implementation("org.jetbrains.kotlinx:kotlinx-html-js:0.6.12")
+    }
+
+    kotlin.sourceSets["iosMain"].dependencies {
+        implementation(kotlin("stdlib-js"))
+//        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-native :1.3.2")
     }
 }
 
