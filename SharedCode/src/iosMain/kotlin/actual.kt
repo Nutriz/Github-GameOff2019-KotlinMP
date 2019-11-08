@@ -7,3 +7,6 @@ actual fun platformName(): String {
             " " +
             UIDevice.currentDevice.systemVersion
 }
+
+actual fun writeLogMessage(message: String, logLevel: LogLevel) {
+}

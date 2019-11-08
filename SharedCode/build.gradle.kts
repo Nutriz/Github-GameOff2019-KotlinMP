@@ -41,10 +41,10 @@ kotlin {
 //        implementation("org.jetbrains.kotlinx:kotlinx-html-js:0.6.12")
     }
 
-    kotlin.sourceSets["iosMain"].dependencies {
-        implementation(kotlin("stdlib-js"))
+//    kotlin.sourceSets["iosMain"].dependencies {
+//        implementation(kotlin("stdlib-js"))
 //        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-native :1.3.2")
-    }
+//    }
 }
 
 val packForXcode by tasks.creating(Sync::class) {
