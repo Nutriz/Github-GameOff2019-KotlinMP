@@ -1,0 +1,3 @@
+rootProject.name = 'GameOff2019MP'
+
+include ':app'
