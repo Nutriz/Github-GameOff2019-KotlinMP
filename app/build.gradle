@@ -24,6 +24,12 @@ android {
             minifyEnabled false
         }
     }
+
+    // Temporary fix for coroutines
+    packagingOptions {
+        exclude 'META-INF/proguard/coroutines.pro'
+        exclude 'META-INF/kotlinx-coroutines-core.kotlin_module'
+    }
 }
 
 dependencies {
